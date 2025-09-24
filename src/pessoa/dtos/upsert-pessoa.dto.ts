@@ -51,7 +51,7 @@ export class PessoaDto {
 
   @ApiProperty({ example: '2025-09-24T12:00:00Z' })
   @IsDateString()
-  datatime: Date;
+  datatime: string;
 }
 
 export class UpsertPessoaDto {

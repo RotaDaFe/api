@@ -7,7 +7,11 @@ export class PessoaService {
   constructor(private readonly pessoaRepository: PessoaRepository) {}
 
   async upsertBatch(pessoas: PessoaDto[]): Promise<string[]> {
-    return this.pessoaRepository.upsertMany(pessoas);
+    const pessoasConvertidas = pessoas.map(p => ({
+      ...p,
+      datatime: new Date(p.datatime),
+    }));
+    return this.pessoaRepository.upsertMany(pessoasConvertidas);
   }
 
   async countByOperadorEmail(): Promise<{ email: string; total: number }[]> {

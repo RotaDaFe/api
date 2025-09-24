@@ -25,15 +25,27 @@ A senha é definida pela variável de ambiente `API_PASSWORD` (ou padrão `SUA_S
 
 ## Documentação Swagger
 
-Acesse `/api/docs` para visualizar e testar os endpoints. Clique em "Authorize" e informe a senha para autenticar.
+Acesse a documentação interativa em:
+
+- Local: [http://localhost:3000/api/docs](http://localhost:3000/api/docs)
+- Netlify/produção: [https://api-rotadafe.netlify.app/](https://api-rotadafe.netlify.app/)
+
+Clique em "Authorize" e informe a senha para autenticar.
 
 ## Variáveis de Ambiente
 
 Crie um arquivo `.env` na raiz com:
 
 ```
-API_PASSWORD=SUA_SENHA_AQUI
-# Outras variáveis do banco, etc
+# arquivo de variáveis de ambiente
+# configuração do banco de dados
+DB_HOST=''
+DB_PORT=3306
+DB_NAME=''
+DB_USERNAME=''
+DB_PASSWORD=''
+# senha para sincronizar a api
+API_PASSWORD=''
 ```
 
 ## Scripts principais
