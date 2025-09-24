@@ -113,7 +113,7 @@ async function bootstrap() {
             deepLinking: true,
             presets: [window.SwaggerUIBundle.presets.apis, window.SwaggerUIStandalonePreset],
             layout: 'BaseLayout',
-            docExpansion: 'none',
+            docExpansion: 'list', // Mostra todos os tópicos expandidos
             persistAuthorization: true,
           });
           window.ui = ui;
